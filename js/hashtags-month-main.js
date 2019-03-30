@@ -13,7 +13,7 @@ function initHashtagsMonth (mode, _container) {
 
   // loading data from google sheets
   // loadSheet(sheetUrl)
-  d3.csv('https://dl.dropboxusercontent.com/s/dlnhju2y24q8199/hashtag_df.csv?dl=1')
+  d3.csv('https://dl.dropboxusercontent.com/s/koo8s8s2ae9hax9/hashtag_df_flattened.csv?dl=1')
     .then(response => {
       // var data = {
       //   hashtags: response['hashtag_df'].elements
