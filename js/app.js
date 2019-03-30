@@ -11,7 +11,7 @@
       var momentMonth = moment(res).format('MMMM');
 
       d3.select('#title')
-        .text(`Trump's Tweets as of ${momentDate} EST`);
+        .text(`AOC's Tweets as of ${momentDate} EST`);
 
       init(momentMonth);
     })
