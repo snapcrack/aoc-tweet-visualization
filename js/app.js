@@ -5,7 +5,7 @@
     var height = 200;
 
     // load as of data from text file
-    d3.text('https://dl.dropboxusercontent.com/s/943b3jdmwclphuk/as_of_date.txt?dl=1')
+    d3.text('https://dl.dropboxusercontent.com/s/0anxdbqoyq3hl5j/as_of_date.txt?dl=1')
     .then(res => {
       var momentDate = moment(res).format('MMMM D, YYYY, h:mm A');
       var momentMonth = moment(res).format('MMMM');
