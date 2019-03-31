@@ -6,7 +6,7 @@ function initPhrasesAll (container) {
 
     let data = null;
     
-    d3.csv('https://dl.dropboxusercontent.com/s/75icf13ohr6y4q7/ngram_df_all_flattened.csv?dl=1')
+    d3.csv('https://dl.dropboxusercontent.com/s/3x5qnxuqe6a2iwe/ngram_df_all_flattened.csv?dl=0')
      .then(response => {
         data = response;
         chart.innerHTML = ''
