@@ -127,7 +127,10 @@ function Timeline() {
       .duration(transition ? attrs.transitionDuration * days.length : 0)
       .delay((d, i) => transition ? i * attrs.transitionDuration : 0)
       .ease(d3.easeElastic)
-      .attr('fill', d => scaleColor(colorRange(d.sentimentMean)))
+      .attr('fill', d => {
+        console.log(d.sentimentMean);
+        return scaleColor(d.sentimentMean)
+      })
       .attr('height', d => {
         var count = d.values.filter(d => d.tag && d.tag.length).length;
         if (count > 0) {

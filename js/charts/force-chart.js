@@ -123,7 +123,7 @@ function Force(params) {
               y: center.y + Math.sin(randomAngle) * randomRadius
             },
             r: scaleRadius(+d.count),
-            c: scaleColor(colorRange(d.sentiment)),
+            c: scaleColor(d.sentiment),
             sentiment: d.sentiment,
             count: d.count,
             name: d.grams,
