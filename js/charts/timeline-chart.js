@@ -81,7 +81,10 @@ function Timeline() {
       .domain(d3.extent(days, d => d.values.length))
       .range([30, 100])
 
-    var scaleColor = d3.piecewise(d3.interpolateRgb.gamma(2.2), attrs.colors);
+    // var scaleColor = d3.piecewise(d3.interpolateRgb.gamma(2.2), attrs.colors);
+    var scaleColor = d3.scaleLinear()
+        .domain([-1, -0.33333333333333337, 0.33333333333333326, 1])
+        .range(attrs.colors)
 
     // just scale average sentiment on a day to [0, 1]
     var colorRange = d3.scaleLinear()

@@ -62,7 +62,10 @@ function Scatterplot() {
         .range([5, 15]);
 
       // create color gradient.
-      var scaleColor = d3.piecewise(d3.interpolateRgb.gamma(2.2), attrs.nodeColors);
+      // var scaleColor = d3.piecewise(d3.interpolateRgb.gamma(2.2), attrs.nodeColors);
+      var scaleColor = d3.scaleLinear()
+        .domain([-1, -0.33333333333333337, 0.33333333333333326, 1])
+        .range(attrs.nodeColors)
 
       //Drawing containers
       var container = d3.select(attrs.container);
