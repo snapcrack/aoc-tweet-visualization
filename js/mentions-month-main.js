@@ -12,7 +12,11 @@ function initMentionsMonth (mode, _container) {
   
     // loading data from google sheets
     // loadSheet(sheetUrl)
+<<<<<<< HEAD
     d3.csv('https://dl.dropboxusercontent.com/s/16g38eb5vapkox5/mention_df.csv?dl=1')
+=======
+    d3.csv('https://dl.dropboxusercontent.com/s/e7iq6wgfta3qrc3/mention_df_flattened.csv?dl=1')
+>>>>>>> origin
       .then(response => {
         // var data = {
         //   mentions: response['mention_df'].elements

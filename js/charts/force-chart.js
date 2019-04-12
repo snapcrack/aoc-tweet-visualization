@@ -70,7 +70,10 @@ function Force(params) {
       var disableMarkerMove = attrs.currentMode !== 'initial';
 
       // create color gradient.
-      var scaleColor = d3.piecewise(d3.interpolateRgb.gamma(2.2), attrs.nodeColors);
+      // var scaleColor = d3.piecewise(d3.interpolateRgb.gamma(2.2), attrs.nodeColors);
+      var scaleColor = d3.scaleLinear()
+        .domain([-1, -0.33333333333333337, 0.33333333333333326, 1])
+        .range(attrs.nodeColors)
       // just scale sentiment to [0, 1]
       var colorRange = d3.scaleLinear()
         .domain(calc.sentimentExtent)
@@ -120,7 +123,7 @@ function Force(params) {
               y: center.y + Math.sin(randomAngle) * randomRadius
             },
             r: scaleRadius(+d.count),
-            c: scaleColor(colorRange(d.sentiment)),
+            c: scaleColor(d.sentiment),
             sentiment: d.sentiment,
             count: d.count,
             name: d.grams,
